@@ -10,6 +10,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   }
 }
