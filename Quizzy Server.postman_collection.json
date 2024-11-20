@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "80926ccb-9ece-43c9-a6bb-13926c1b1ee7",
+		"name": "Quizzy Server",
+		"description": "API collection for the Quiz App Backend.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19537751"
+	},
+	"item": [
+		{
+			"name": "Create Quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"General Knowledge Quiz\",\n  \"description\": \"A quiz about general knowledge\",\n  \"questions\": [\n    {\n      \"questionText\": \"What is the capital of France?\",\n      \"options\": [\"Paris\", \"Berlin\", \"Madrid\", \"Rome\"],\n      \"correctAnswer\": \"Paris\"\n    },\n    {\n      \"questionText\": \"What is 2+2?\",\n      \"options\": [\"3\", \"4\", \"5\", \"6\"],\n      \"correctAnswer\": \"4\"\n    },\n    {\n      \"questionText\": \"What is the largest planet in our solar system?\",\n      \"options\": [\"Earth\", \"Jupiter\", \"Saturn\", \"Mars\"],\n      \"correctAnswer\": \"Jupiter\"\n    },\n    {\n      \"questionText\": \"Who wrote 'Romeo and Juliet'?\",\n      \"options\": [\"Charles Dickens\", \"William Shakespeare\", \"Jane Austen\", \"George Orwell\"],\n      \"correctAnswer\": \"William Shakespeare\"\n    },\n    {\n      \"questionText\": \"What is the chemical symbol for gold?\",\n      \"options\": [\"Au\", \"Ag\", \"Pb\", \"Fe\"],\n      \"correctAnswer\": \"Au\"\n    },\n    {\n      \"questionText\": \"Which country is known as the Land of the Rising Sun?\",\n      \"options\": [\"China\", \"Japan\", \"India\", \"South Korea\"],\n      \"correctAnswer\": \"Japan\"\n    },\n    {\n      \"questionText\": \"What is the hardest natural substance on Earth?\",\n      \"options\": [\"Gold\", \"Diamond\", \"Iron\", \"Platinum\"],\n      \"correctAnswer\": \"Diamond\"\n    },\n    {\n      \"questionText\": \"How many continents are there?\",\n      \"options\": [\"5\", \"6\", \"7\", \"8\"],\n      \"correctAnswer\": \"7\"\n    },\n    {\n      \"questionText\": \"Who painted the Mona Lisa?\",\n      \"options\": [\"Vincent van Gogh\", \"Leonardo da Vinci\", \"Pablo Picasso\", \"Claude Monet\"],\n      \"correctAnswer\": \"Leonardo da Vinci\"\n    },\n    {\n      \"questionText\": \"What is the smallest country in the world?\",\n      \"options\": [\"Monaco\", \"Vatican City\", \"San Marino\", \"Liechtenstein\"],\n      \"correctAnswer\": \"Vatican City\"\n    }\n  ]\n}\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/quizzes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Quizzes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/quizzes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quiz by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/quizzes/673da9285dd18861822f24c5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"quizzes",
+						"673da9285dd18861822f24c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quiz",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Updated Quiz Title\",\n  \"description\": \"Updated description\",\n  \"questions\": [\n    {\n      \"questionText\": \"Updated question?\",\n      \"options\": [\"Option 1\", \"Option 2\"],\n      \"correctAnswer\": \"Option 1\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/quizzes/673da9285dd18861822f24c5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"quizzes",
+						"673da9285dd18861822f24c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Quiz",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/quizzes/673da5d58500eeb08b1a3cda",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"quizzes",
+						"673da5d58500eeb08b1a3cda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"questionText\": \"What is the capital of Maharashtra?\",\n  \"options\": [\"Mumbai\", \"Delhi\", \"Nagpur\"],\n  \"correctAnswer\": \"Mumbai\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/questions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Question",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"questionText\": \"What is the capital of India?\",\n  \"options\": [\"Mumbai\", \"Delhi\", \"Nagpur\"],\n  \"correctAnswer\": \"Delhi\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/questions/673daa953369cc5fbe30ac93",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"questions",
+						"673daa953369cc5fbe30ac93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Question",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/questions/673daa953369cc5fbe30ac93",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"questions",
+						"673daa953369cc5fbe30ac93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Quiz Response",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"quizId\": \"673daeded4428f1afdda9b33\", \n  \"userId\": \"yashodharpatel\", \n  \"responses\": [\n    { \"questionId\": \"673daeded4428f1afdda9b28\", \"answer\": 0 }, \n    { \"questionId\": \"673daeded4428f1afdda9b29\", \"answer\": 0 },\n    { \"questionId\": \"673daeded4428f1afdda9b2a\", \"answer\": 2 },\n    { \"questionId\": \"673daeded4428f1afdda9b2b\", \"answer\": 0 },\n    { \"questionId\": \"673daeded4428f1afdda9b2c\", \"answer\": 1 },\n    { \"questionId\": \"673daeded4428f1afdda9b2d\", \"answer\": 2 },\n    { \"questionId\": \"673daeded4428f1afdda9b2e\", \"answer\": 0 },\n    { \"questionId\": \"673daeded4428f1afdda9b2f\", \"answer\": 1 },\n    { \"questionId\": \"673daeded4428f1afdda9b30\", \"answer\": 2 },\n    { \"questionId\": \"673daeded4428f1afdda9b31\", \"answer\": 0 }\n  ]\n}\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/responses",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"responses"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		}
+	]
+}
