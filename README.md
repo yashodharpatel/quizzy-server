@@ -4,17 +4,18 @@ Quizzy Server is a backend API that manages quizzes, questions, and user respons
 
 ## APIs
 
-| Method | Endpoint             | Description                               |
-| ------ | -------------------- | ----------------------------------------- |
-| POST   | `/api/quizzes`       | Create a new quiz                         |
-| GET    | `/api/quizzes`       | Get all quizzes                           |
-| GET    | `/api/quizzes/:id`   | Get a single quiz by ID                   |
-| PUT    | `/api/quizzes/:id`   | Update a quiz by ID                       |
-| DELETE | `/api/quizzes/:id`   | Delete a quiz by ID                       |
-| POST   | `/api/questions`     | Create a new question                     |
-| PUT    | `/api/questions/:id` | Edit a specific question by ID            |
-| DELETE | `/api/questions/:id` | Delete a specific question by ID          |
-| POST   | `/api/responses`     | Submit user responses and calculate score |
+| Method | Endpoint               | Description                                                           |
+| ------ | ---------------------- | --------------------------------------------------------------------- |
+| POST   | `/api/quizzes`         | Create a new quiz                                                     |
+| GET    | `/api/quizzes`         | Get all quizzes                                                       |
+| GET    | `/api/quizzes/:id`     | Get a single quiz by ID                                               |
+| PUT    | `/api/quizzes/:id`     | Update a quiz by ID                                                   |
+| DELETE | `/api/quizzes/:id`     | Delete a quiz by ID                                                   |
+| POST   | `/api/questions`       | Create a new question                                                 |
+| PUT    | `/api/questions/:id`   | Edit a specific question by ID                                        |
+| DELETE | `/api/questions/:id`   | Delete a specific question by ID                                      |
+| POST   | `/api/responses`       | Submit user responses and calculate score                             |
+| POST   | `/api/log-abandonment` | Send mail to user and log into database when a user abandons the quiz |
 
 ## Setup
 

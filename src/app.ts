@@ -8,6 +8,7 @@ import connectDB from "./config/dbConnection.ts";
 import quizRoutes from "./routes/quiz.route.ts";
 import questionRoutes from "./routes/question.route.ts";
 import responseRoutes from "./routes/response.route.ts";
+import abandonmentRoutes from "./routes/abandonment.route.ts";
 
 connectDB();
 
@@ -22,6 +23,7 @@ app.use(morgan("dev"));
 app.use("/api/quizzes", quizRoutes);
 app.use("/api/questions", questionRoutes);
 app.use("/api/responses", responseRoutes);
+app.use("/api/log-abandonment", abandonmentRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Quiz App Backend is running!");

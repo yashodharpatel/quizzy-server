@@ -218,6 +218,33 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Log Abandonment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"patelyashodhar012@gmail.com\",\n  \"quizId\": \"673f2e7ef21735fa57e8f425\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/log-abandonment",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"log-abandonment"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [
