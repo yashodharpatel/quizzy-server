@@ -52,6 +52,8 @@ To run the project locally, follow these steps:
    DB_URI=your-mongodb-uri-here
    DB_NAME=your-db-name
    PORT=your-preferred-port
+   MAILSERVICE_USER=your-mailservice-username
+   MAILSERVICE_PASS=your-mailservice-password
    ```
 
 5. Start the development server:
